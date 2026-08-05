@@ -1,0 +1,12 @@
+{
+  "db_name": "MySQL",
+  "query": "UPDATE sop_cycle\n                      SET status = 'frozen', frozen_at = NOW()\n                    WHERE cycle_id = ? AND status = 'open'",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": []
+  },
+  "hash": "993350d6a519081a8323bd0767b87182704c5146fbff4118f2b2d11517b437db"
+}

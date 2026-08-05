@@ -1,0 +1,104 @@
+{
+  "db_name": "MySQL",
+  "query": "SELECT customer, item_code, branch, ym, selected_source, selected_qty,\n                          reason, auto_accepted AS `auto_accepted: bool`, is_frozen AS `is_frozen: bool`\n                   FROM demand_consensus\n                   WHERE cycle_id = ?\n                   ORDER BY customer, item_code, branch, ym",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "customer",
+        "type_info": {
+          "type": "VarString",
+          "flags": "NOT_NULL | PRIMARY_KEY",
+          "max_size": 1020
+        }
+      },
+      {
+        "ordinal": 1,
+        "name": "item_code",
+        "type_info": {
+          "type": "VarString",
+          "flags": "NOT_NULL | PRIMARY_KEY | NO_DEFAULT_VALUE",
+          "max_size": 560
+        }
+      },
+      {
+        "ordinal": 2,
+        "name": "branch",
+        "type_info": {
+          "type": "VarString",
+          "flags": "NOT_NULL | PRIMARY_KEY | NO_DEFAULT_VALUE",
+          "max_size": 256
+        }
+      },
+      {
+        "ordinal": 3,
+        "name": "ym",
+        "type_info": {
+          "type": "VarString",
+          "flags": "NOT_NULL | PRIMARY_KEY | NO_DEFAULT_VALUE",
+          "max_size": 28
+        }
+      },
+      {
+        "ordinal": 4,
+        "name": "selected_source",
+        "type_info": {
+          "type": "String",
+          "flags": "NOT_NULL | ENUM | NO_DEFAULT_VALUE",
+          "max_size": 40
+        }
+      },
+      {
+        "ordinal": 5,
+        "name": "selected_qty",
+        "type_info": {
+          "type": "Double",
+          "flags": "NOT_NULL | NO_DEFAULT_VALUE",
+          "max_size": 22
+        }
+      },
+      {
+        "ordinal": 6,
+        "name": "reason",
+        "type_info": {
+          "type": "VarString",
+          "flags": "",
+          "max_size": 1020
+        }
+      },
+      {
+        "ordinal": 7,
+        "name": "auto_accepted: bool",
+        "type_info": {
+          "type": "Tiny",
+          "flags": "NOT_NULL",
+          "max_size": 1
+        }
+      },
+      {
+        "ordinal": 8,
+        "name": "is_frozen: bool",
+        "type_info": {
+          "type": "Tiny",
+          "flags": "NOT_NULL",
+          "max_size": 1
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false
+    ]
+  },
+  "hash": "b67a588b5d849461de9fccd371d297974bb0086d41e6109f07736d8ae519aa37"
+}

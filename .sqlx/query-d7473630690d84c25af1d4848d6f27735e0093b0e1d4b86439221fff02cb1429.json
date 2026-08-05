@@ -1,0 +1,12 @@
+{
+  "db_name": "MySQL",
+  "query": "INSERT INTO config (config_key, config_value, updated_by)\n                   VALUES (?, ?, ?)\n                   ON DUPLICATE KEY UPDATE\n                       config_value = VALUES(config_value),\n                       updated_by   = VALUES(updated_by)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 3
+    },
+    "nullable": []
+  },
+  "hash": "d7473630690d84c25af1d4848d6f27735e0093b0e1d4b86439221fff02cb1429"
+}

@@ -1,0 +1,24 @@
+{
+  "db_name": "MySQL",
+  "query": "SELECT is_frozen AS `is_frozen: bool` FROM demand_consensus\n                           WHERE cycle_id = ? AND customer = ? AND item_code = ? AND branch = ? AND ym = ?",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "is_frozen: bool",
+        "type_info": {
+          "type": "Tiny",
+          "flags": "NOT_NULL",
+          "max_size": 1
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 5
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "40ca08ab7eba627b0250ba54042ac84da4eb851ce1c161b6e072f423a16b426b"
+}

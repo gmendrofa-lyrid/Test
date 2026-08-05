@@ -1,0 +1,12 @@
+{
+  "db_name": "MySQL",
+  "query": "UPDATE stocking_policy\n                   SET sl_ovr=NULL, ot_ovr=NULL, moq_ovr=NULL, inc_ovr=NULL, sigma_lt_ovr=NULL,\n                       st_ovr=NULL, lt_ovr=NULL, override_updated_by=?, override_updated_at=NOW()\n                   WHERE item_code = ? AND branch = ?\n                     AND (sl_ovr IS NOT NULL OR ot_ovr IS NOT NULL OR moq_ovr IS NOT NULL\n                          OR inc_ovr IS NOT NULL OR sigma_lt_ovr IS NOT NULL\n                          OR st_ovr IS NOT NULL OR lt_ovr IS NOT NULL)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 3
+    },
+    "nullable": []
+  },
+  "hash": "03c3dd07cfe6c6c13ed3b9bf25742ea0c662c82d696ae3d0c93a9ed911b76ca0"
+}

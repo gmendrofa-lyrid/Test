@@ -1,0 +1,114 @@
+{
+  "db_name": "MySQL",
+  "query": "SELECT salesperson, customer, item_code, branch, ym,\n                          sales_qty, sales_reason, selected, updated_by, updated_at\n                   FROM manual_sales_forecast_entry\n                   WHERE cycle_id = ? AND (? = '' OR salesperson = ?)\n                   ORDER BY salesperson, customer, item_code, branch, ym",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "salesperson",
+        "type_info": {
+          "type": "VarString",
+          "flags": "NOT_NULL | PRIMARY_KEY | NO_DEFAULT_VALUE",
+          "max_size": 512
+        }
+      },
+      {
+        "ordinal": 1,
+        "name": "customer",
+        "type_info": {
+          "type": "VarString",
+          "flags": "NOT_NULL | PRIMARY_KEY | NO_DEFAULT_VALUE",
+          "max_size": 1020
+        }
+      },
+      {
+        "ordinal": 2,
+        "name": "item_code",
+        "type_info": {
+          "type": "VarString",
+          "flags": "NOT_NULL | PRIMARY_KEY | NO_DEFAULT_VALUE",
+          "max_size": 560
+        }
+      },
+      {
+        "ordinal": 3,
+        "name": "branch",
+        "type_info": {
+          "type": "VarString",
+          "flags": "NOT_NULL | PRIMARY_KEY | NO_DEFAULT_VALUE",
+          "max_size": 256
+        }
+      },
+      {
+        "ordinal": 4,
+        "name": "ym",
+        "type_info": {
+          "type": "VarString",
+          "flags": "NOT_NULL | PRIMARY_KEY | NO_DEFAULT_VALUE",
+          "max_size": 28
+        }
+      },
+      {
+        "ordinal": 5,
+        "name": "sales_qty",
+        "type_info": {
+          "type": "Double",
+          "flags": "",
+          "max_size": 22
+        }
+      },
+      {
+        "ordinal": 6,
+        "name": "sales_reason",
+        "type_info": {
+          "type": "String",
+          "flags": "ENUM",
+          "max_size": 44
+        }
+      },
+      {
+        "ordinal": 7,
+        "name": "selected",
+        "type_info": {
+          "type": "String",
+          "flags": "ENUM",
+          "max_size": 40
+        }
+      },
+      {
+        "ordinal": 8,
+        "name": "updated_by",
+        "type_info": {
+          "type": "VarString",
+          "flags": "NOT_NULL | NO_DEFAULT_VALUE",
+          "max_size": 512
+        }
+      },
+      {
+        "ordinal": 9,
+        "name": "updated_at",
+        "type_info": {
+          "type": "Datetime",
+          "flags": "NOT_NULL | BINARY",
+          "max_size": 19
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 3
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      true,
+      true,
+      false,
+      false
+    ]
+  },
+  "hash": "28edc3be8a90d59e5f07a2ea260cc88994cd54a441303c43ccfc29ecf601bfa4"
+}

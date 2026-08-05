@@ -1,0 +1,12 @@
+{
+  "db_name": "MySQL",
+  "query": "INSERT INTO sales_forecast_entry\n                               (cycle_id, salesperson, customer, item_code, branch, ym,\n                                sales_qty, sales_reason, selected, updated_by, updated_at)\n                           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW())\n                           ON DUPLICATE KEY UPDATE\n                               salesperson  = VALUES(salesperson),\n                               sales_qty    = VALUES(sales_qty),\n                               sales_reason = VALUES(sales_reason),\n                               selected     = VALUES(selected),\n                               updated_by   = VALUES(updated_by),\n                               updated_at   = NOW()",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 10
+    },
+    "nullable": []
+  },
+  "hash": "77a03e53123b69d5576501f580d4b564a13eebffdd5ab3ffe8e1728a454c3c06"
+}

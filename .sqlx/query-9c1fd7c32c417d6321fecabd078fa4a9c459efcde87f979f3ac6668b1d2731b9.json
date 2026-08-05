@@ -1,0 +1,12 @@
+{
+  "db_name": "MySQL",
+  "query": "INSERT INTO demand_consensus\n                               (cycle_id, customer, item_code, branch, ym,\n                                selected_source, selected_qty, reason, auto_accepted, resolved_by, resolved_at)\n                           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW())\n                           ON DUPLICATE KEY UPDATE\n                               selected_source = VALUES(selected_source),\n                               selected_qty    = VALUES(selected_qty),\n                               reason          = VALUES(reason),\n                               auto_accepted   = VALUES(auto_accepted),\n                               resolved_by     = VALUES(resolved_by),\n                               resolved_at     = NOW()",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 10
+    },
+    "nullable": []
+  },
+  "hash": "9c1fd7c32c417d6321fecabd078fa4a9c459efcde87f979f3ac6668b1d2731b9"
+}

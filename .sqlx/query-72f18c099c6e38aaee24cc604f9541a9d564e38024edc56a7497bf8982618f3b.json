@@ -1,0 +1,12 @@
+{
+  "db_name": "MySQL",
+  "query": "INSERT INTO eoq_param\n                       (id, item_group, ordering_cost, holding_pct, active, updated_by)\n                   VALUES (?, ?, ?, ?, ?, ?)\n                   ON DUPLICATE KEY UPDATE\n                       ordering_cost = VALUES(ordering_cost),\n                       holding_pct   = VALUES(holding_pct),\n                       active        = VALUES(active),\n                       updated_by    = VALUES(updated_by)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 6
+    },
+    "nullable": []
+  },
+  "hash": "72f18c099c6e38aaee24cc604f9541a9d564e38024edc56a7497bf8982618f3b"
+}

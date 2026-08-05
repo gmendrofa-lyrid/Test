@@ -1,0 +1,50 @@
+[package]
+name = "snop_cockpit_be"
+version = "0.1.0"
+edition = "2024"
+default-run = "snop_cockpit_be"
+
+[dependencies]
+actix-service = "2.0.3"
+actix-web = "4.13.0"
+anyhow = "1.0.102"
+async-stream = "0.3.6"
+chrono = { version = "0.4.44", features = ["serde"] }
+deadpool = "0.13.0"
+dotenvy = "0.15.7"
+futures = "0.3.32"
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0.149"
+sqlx = { version = "0.8.6", features = ["chrono", "mysql", "runtime-tokio-rustls"] }
+time = { version = "0.3.47", features = ["macros"] }
+tokio = { version = "1.52.1", features = ["full"] }
+tracing = "0.1.44"
+tracing-actix-web = "0.7.21"
+tracing-log = "0.2.0"
+tracing-subscriber = { version = "0.3.23", features = ["env-filter", "time"] }
+
+[dependencies.uuid]
+version = "1.10.0"
+features = ["v4", "fast-rng", "macro-diagnostics"]
+
+# Linting config mirrors microservice_rbac.
+[workspace.lints.rust]
+non_ascii_idents = "forbid"
+deprecated_in_future = "deny"
+future_incompatible = { level = "deny", priority = -1 }
+nonstandard_style = { level = "deny", priority = -1 }
+rust_2018_idioms = { level = "deny", priority = -1 }
+unused = { level = "deny", priority = -1 }
+unused_qualifications = "deny"
+
+[workspace.lints.clippy]
+dbg_macro = "warn"
+todo = "warn"
+result_large_err = "allow"
+needless_borrow = "deny"
+redundant_clone = "deny"
+unused_async = "deny"
+unused_self = "deny"
+
+[lints]
+workspace = true

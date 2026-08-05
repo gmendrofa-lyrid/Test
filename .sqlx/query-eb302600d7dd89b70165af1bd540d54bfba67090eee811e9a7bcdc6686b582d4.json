@@ -1,0 +1,12 @@
+{
+  "db_name": "MySQL",
+  "query": "INSERT INTO pm_lead_time_default\n                       (id, principal, pig, item_group, leg, lead_days, sigma_days, note, active, updated_by)\n                   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)\n                   ON DUPLICATE KEY UPDATE\n                       lead_days  = VALUES(lead_days),\n                       sigma_days = VALUES(sigma_days),\n                       note       = VALUES(note),\n                       active     = VALUES(active),\n                       updated_by = VALUES(updated_by)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 10
+    },
+    "nullable": []
+  },
+  "hash": "eb302600d7dd89b70165af1bd540d54bfba67090eee811e9a7bcdc6686b582d4"
+}

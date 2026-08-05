@@ -1,0 +1,12 @@
+{
+  "db_name": "MySQL",
+  "query": "UPDATE demand_consensus\n                      SET is_frozen = 1, frozen_by = ?, frozen_at = NOW()\n                    WHERE cycle_id = ? AND is_frozen = 0",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": []
+  },
+  "hash": "f6c4bff9a4e8c653025d22f285eb029cb4580002a1d0b8a072c61fbdb3e47fb6"
+}

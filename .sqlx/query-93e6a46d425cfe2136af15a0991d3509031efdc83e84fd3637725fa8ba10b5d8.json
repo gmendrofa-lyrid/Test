@@ -1,0 +1,24 @@
+{
+  "db_name": "MySQL",
+  "query": "SELECT ym\n                   FROM demand_consensus\n                   WHERE cycle_id = ?\n                   GROUP BY ym",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "ym",
+        "type_info": {
+          "type": "VarString",
+          "flags": "NOT_NULL | PRIMARY_KEY | NO_DEFAULT_VALUE",
+          "max_size": 28
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "93e6a46d425cfe2136af15a0991d3509031efdc83e84fd3637725fa8ba10b5d8"
+}

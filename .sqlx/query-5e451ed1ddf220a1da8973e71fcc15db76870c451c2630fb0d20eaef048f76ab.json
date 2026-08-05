@@ -1,0 +1,12 @@
+{
+  "db_name": "MySQL",
+  "query": "INSERT INTO feed_snapshot (snapshot_key, payload)\n                   VALUES (?, ?)\n                   ON DUPLICATE KEY UPDATE payload = VALUES(payload)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": []
+  },
+  "hash": "5e451ed1ddf220a1da8973e71fcc15db76870c451c2630fb0d20eaef048f76ab"
+}

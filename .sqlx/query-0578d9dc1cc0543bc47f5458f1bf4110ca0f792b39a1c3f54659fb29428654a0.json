@@ -1,0 +1,24 @@
+{
+  "db_name": "MySQL",
+  "query": "SELECT status\n                   FROM sop_cycle\n                   WHERE cycle_id = ?\n                   FOR UPDATE",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "status",
+        "type_info": {
+          "type": "String",
+          "flags": "NOT_NULL | ENUM",
+          "max_size": 24
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "0578d9dc1cc0543bc47f5458f1bf4110ca0f792b39a1c3f54659fb29428654a0"
+}

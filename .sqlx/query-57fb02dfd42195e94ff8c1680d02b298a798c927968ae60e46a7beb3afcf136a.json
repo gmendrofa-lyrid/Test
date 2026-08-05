@@ -1,0 +1,12 @@
+{
+  "db_name": "MySQL",
+  "query": "INSERT INTO sop_cycle (cycle_id, label, target_months)\n                   VALUES (?, ?, ?)\n                   ON DUPLICATE KEY UPDATE cycle_id = cycle_id",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 3
+    },
+    "nullable": []
+  },
+  "hash": "57fb02dfd42195e94ff8c1680d02b298a798c927968ae60e46a7beb3afcf136a"
+}

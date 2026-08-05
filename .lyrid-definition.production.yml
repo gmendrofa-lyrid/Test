@@ -1,0 +1,14 @@
+name: PRD-snop-cockpit-be
+description: S&OP Cockpit Backend (Production)
+ignoreFiles: lc .git node_modules .gitignore build .cache package-lock.json target
+modules:
+  - name: PRD-snop-cockpit-be
+    language: docker
+    description: PRD-snop-cockpit-be
+    container:
+    ports:
+      - alias: "http"
+        port: 9093
+    functions:
+      - name: PRD-snop-cockpit-be
+        description: PRD-snop-cockpit-be

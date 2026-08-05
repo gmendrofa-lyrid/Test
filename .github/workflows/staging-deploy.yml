@@ -1,0 +1,19 @@
+name: Staging Deployment
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+    - uses: actions/checkout@v2
+    - run: |
+                  cp ./.env.staging ./.env
+    - name: Install lc and code submit
+      run: |
+        wget https://api.lyrid.io/client/dl/linux -O lc
+        chmod u+x lc
+        ./lc config add --config bahtera --key ${{ secrets.LYRID_API_KEY }} --secret ${{ secrets.LYRID_API_SECRET }}
+        ./lc code submit -i ${{ secrets.LYRID_INSTANCEID }}
+        sleep 10

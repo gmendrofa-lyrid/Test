@@ -1,0 +1,12 @@
+{
+  "db_name": "MySQL",
+  "query": "INSERT INTO policy_change_log\n                               (id, item_code, branch, field, from_value, to_value, actor)\n                           VALUES (?, ?, ?, ?, ?, ?, ?)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 7
+    },
+    "nullable": []
+  },
+  "hash": "32a1259eb482f3689b7beb342f4cfd51bc54add81a37d0ce488254a668f5a1f0"
+}

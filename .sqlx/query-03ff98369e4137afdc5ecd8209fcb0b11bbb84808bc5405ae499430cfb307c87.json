@@ -1,0 +1,12 @@
+{
+  "db_name": "MySQL",
+  "query": "INSERT INTO stocking_policy\n                               (item_code, branch, item_name, item_group, primary_item_group, uom,\n                                stocked, cls, uc, oh_qty, oh_value, lead_time, dd, md, aq, sd, obs,\n                                refreshed_at)\n                           VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?, NOW())\n                           ON DUPLICATE KEY UPDATE\n                               item_name=VALUES(item_name), item_group=VALUES(item_group),\n                               primary_item_group=VALUES(primary_item_group), uom=VALUES(uom),\n                               stocked=VALUES(stocked), cls=VALUES(cls), uc=VALUES(uc),\n                               oh_qty=VALUES(oh_qty), oh_value=VALUES(oh_value),\n                               lead_time=VALUES(lead_time), dd=VALUES(dd), md=VALUES(md),\n                               aq=VALUES(aq), sd=VALUES(sd), obs=VALUES(obs), refreshed_at=NOW()",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 17
+    },
+    "nullable": []
+  },
+  "hash": "03ff98369e4137afdc5ecd8209fcb0b11bbb84808bc5405ae499430cfb307c87"
+}

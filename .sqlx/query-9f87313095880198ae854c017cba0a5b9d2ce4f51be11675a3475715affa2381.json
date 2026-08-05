@@ -1,0 +1,12 @@
+{
+  "db_name": "MySQL",
+  "query": "INSERT INTO demand_snapshot (as_of, payload)\n                   VALUES (?, ?)\n                   ON DUPLICATE KEY UPDATE payload = VALUES(payload)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": []
+  },
+  "hash": "9f87313095880198ae854c017cba0a5b9d2ce4f51be11675a3475715affa2381"
+}

@@ -1,0 +1,14 @@
+name: STG-snop-cockpit-be
+description: S&OP Cockpit Backend (Staging)
+ignoreFiles: lc .git node_modules .gitignore build .cache package-lock.json target
+modules:
+  - name: STG-snop-cockpit-be
+    language: docker
+    description: STG-snop-cockpit-be
+    container:
+    ports:
+      - alias: "http"
+        port: 9093
+    functions:
+      - name: STG-snop-cockpit-be
+        description: STG-snop-cockpit-be
